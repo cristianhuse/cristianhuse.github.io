@@ -497,7 +497,33 @@
 
       .course-item { grid-template-columns: 1fr; }
     }
+    
+    
+/* ── MOBILE FIXES ── */
+    @media (max-width: 768px) {
+      .sidebar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar-name,
+      .sidebar-title {
+        width: 100%;
+        text-align: center;
+      }
+
+      .sidebar-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+
   </style>
+
 </head>
 
 <body>
