@@ -487,19 +487,24 @@
     <!-- ── PHOTO ──
          Replace the src with your actual photo filename.
          The photo should be in the same folder as index.html.
-         If no photo yet, delete the <img> and uncomment the placeholder div. -->
+         If no photo yet, delete the <img> and uncomment the placeholder div. 
+         <div class="sidebar-photo-placeholder" id="photo-placeholder" style="display: flex;">Photo</div>
+         -->
      <img class="sidebar-photo" 
-     src="HUSE_pic_small.jpg" 
+     src="HUSE_pic.jpg" 
      alt="Photo of Cristian Huse" 
      onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';" />
 
-    <div class="sidebar-photo-placeholder" id="photo-placeholder" style="display: flex;">Photo</div>
+
 
     <!-- ── NAME & POSITION ── -->
     <div class="sidebar-name">Cristian Huse</div>
     <div class="sidebar-title">
+      Economist
+<!--  
       Chair of Applied Microeconomics<br>
       University of Oldenburg
+         -->      
     </div>
 
     <!-- ── NAVIGATION ──
@@ -508,7 +513,7 @@
     <nav>
       <a href="#about" class="active">About</a>
       <a href="#news" class="">News</a>
-      <a href="#working-papers" class="">Current Research</a>
+      <a href="#working-papers" class="">Research</a>
       <a href="#research" class="">Publications</a>
       <a href="#teaching" class="">Teaching</a>
       <a href="HuseCV_web.pdf" target="_blank">CV ↗</a>
@@ -522,6 +527,7 @@
       <div style="margin-top:8px"><strong>Phone</strong></div>
       <div>+49 441 798 4670</div>
       <div style="margin-top:8px"><strong>Links</strong></div>
+      <div><a href="https://orcid.org/0000-0002-2532-3522" target="_blank">ORCID</a></div>      
       <div><a href="https://scholar.google.com/citations?hl=en&user=3qc9IlUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a></div>
       <!-- 
       <div><a href="https://cepr.org/about/people/cristian-huse-0" target="_blank">CEPR</a></div>
