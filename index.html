@@ -98,8 +98,20 @@
       text-align: center;
     }
 
+
+-------------
 @media (max-width: 768px) {
+  .shell {
+    flex-direction: column;
+  }
+
   .sidebar {
+    position: static;
+    height: auto;
+    width: 100%;
+    padding: 32px 20px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
     flex-direction: column;
     align-items: center;
   }
@@ -110,16 +122,31 @@
     text-align: center;
   }
 
-  .sidebar-contact {
-    text-align: center;   /* ← only this, nothing else */
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 16px;
   }
 
-    .sidebar-contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+  nav a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 
-    .sidebar-contact a:hover { text-decoration: underline; }
+  main {
+    padding: 32px 20px 48px;
+  }
+
+  .hero-name { font-size: 28px; }
+  .hero-tagline { font-size: 16px; }
+  .news-item { grid-template-columns: 1fr; }
+  .paper-title { font-size: 15px; }
+  .course-item { grid-template-columns: 1fr; }
+  .interest-list { justify-content: center; }
+}
+
 
     /* ═══════════ MAIN CONTENT ═══════════ */
     main {
@@ -431,34 +458,7 @@
     }
 
     /* ═══════════ RESPONSIVE ═══════════ */
-    @media (max-width: 720px) {
-      .shell { flex-direction: column; }
 
-      .sidebar {
-        position: static;
-        height: auto;
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 24px 20px;
-        border-right: none;
-        border-bottom: 1px solid var(--line);
-        gap: 16px;
-      }
-
-      .sidebar-photo, .sidebar-photo-placeholder { margin-bottom: 0; }
-
-      nav { flex-direction: row; flex-wrap: wrap; gap: 4px; margin-bottom: 0; }
-      nav a { padding: 5px 10px; }
-
-      main { padding: 36px 20px 48px; }
-
-      .news-item { grid-template-columns: 1fr; }
-      .news-date { margin-bottom: 2px; }
-
-      .course-item { grid-template-columns: 1fr; }
-    }
-    
     
 /* ── MOBILE FIXES ── */
     @media (max-width: 768px) {
