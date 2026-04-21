@@ -3,38 +3,29 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ════════════════════════════════════════════════
-       TITLE — shows in browser tab and Google results
-       ════════════════════════════════════════════════ -->
   <title>Cristian Huse | Economist</title>
-  <meta name="description" content="Cristian Huse — Professor of Applied Microeconomics at the University of Oldenburg. 
-  Research in Applied Microeonomics, Applied Econometrics, Environmental and Energy Economics, Industrial Organization.">
+  <meta name="description" content="Cristian Huse — Professor of Applied Microeconomics at the University of Oldenburg. Research in Applied Microeconomics, Applied Econometrics, Environmental and Energy Economics, Industrial Organization.">
 
-  <!-- Google Fonts: Playfair Display (headings) + Source Serif 4 (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="index-Dateien/css2.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
 
   <style>
-    /* ════════════════════════════════
-       GLOBAL TOKENS — edit here only
-       ════════════════════════════════ */
     :root {
-      --bg:        #f5f0e8;   /* warm parchment — keep your vibe */
-      --bg-card:   #faf7f2;   /* slightly lighter for cards */
-      --ink:       #1c1a17;   /* near-black for text */
-      --ink-soft:  #5a5448;   /* muted labels */
-      --accent:    #7a3b1e;   /* dark terracotta — academic & warm */
-      --accent-lt: #c8855a;   /* lighter for hover */
-      --line:      #d9d0c4;   /* dividers */
-      --nav-w:     180px;     /* left-column width */
-      --max-w:     820px;     /* main-content max width */
+      --bg:        #f5f0e8;
+      --bg-card:   #faf7f2;
+      --ink:       #1c1a17;
+      --ink-soft:  #5a5448;
+      --accent:    #7a3b1e;
+      --accent-lt: #c8855a;
+      --line:      #d9d0c4;
+      --nav-w:     180px;
+      --max-w:     820px;
       --font-head: 'Playfair Display', Georgia, serif;
       --font-body: 'Source Serif 4', Georgia, serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -47,7 +38,6 @@
       min-height: 100vh;
     }
 
-    /* ═══════════ LAYOUT SHELL ═══════════ */
     .shell {
       display: flex;
       min-height: 100vh;
@@ -55,7 +45,7 @@
       margin: 0 auto;
     }
 
-    /* ═══════════ LEFT SIDEBAR ═══════════ */
+    /* ── SIDEBAR ── */
     .sidebar {
       position: sticky;
       top: 0;
@@ -67,74 +57,54 @@
       align-items: center;
       padding: 48px 24px 32px;
       border-right: 1px solid var(--line);
-      gap: 0;
       overflow-y: auto;
     }
 
     .sidebar-photo {
-      width: 120px;
-      height: 120px;
+      width: 120px; height: 120px;
       border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: cover; object-position: center top;
       border: 3px solid var(--line);
       margin-bottom: 20px;
-      /* ── REPLACE src below with your photo path ── */
     }
 
-    /* Photo placeholder if no image yet */
     .sidebar-photo-placeholder {
-      width: 120px;
-      height: 120px;
+      width: 120px; height: 120px;
       border-radius: 50%;
       border: 3px solid var(--line);
       background: var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: none;
+      align-items: center; justify-content: center;
       margin-bottom: 20px;
-      color: var(--ink-soft);
-      font-size: 13px;
-      text-align: center;
+      color: var(--ink-soft); font-size: 13px; text-align: center;
     }
 
     .sidebar-name {
       font-family: var(--font-head);
-      font-size: 15px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 1.3;
+      font-size: 15px; font-weight: 600;
+      text-align: center; line-height: 1.3;
       margin-bottom: 4px;
     }
 
     .sidebar-title {
-      font-size: 12px;
-      color: var(--ink-soft);
-      text-align: center;
-      line-height: 1.5;
+      font-size: 12px; color: var(--ink-soft);
+      text-align: center; line-height: 1.5;
       margin-bottom: 28px;
     }
 
-    /* Nav links */
     nav {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      margin-bottom: 32px;
+      display: flex; flex-direction: column;
+      gap: 2px; margin-bottom: 32px;
     }
 
     nav a {
       display: block;
       font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      text-decoration: none;
-      padding: 7px 12px;
-      border-radius: 4px;
+      font-size: 13px; font-weight: 400;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--ink-soft); text-decoration: none;
+      padding: 7px 12px; border-radius: 4px;
       transition: background 0.15s, color 0.15s;
     }
 
@@ -143,170 +113,81 @@
       background: rgba(122, 59, 30, 0.07);
     }
 
-    /* Contact block in sidebar */
     .sidebar-contact {
       width: 100%;
       border-top: 1px solid var(--line);
       padding-top: 20px;
-      font-size: 12px;
-      color: var(--ink-soft);
-      line-height: 2;
+      font-size: 12px; color: var(--ink-soft); line-height: 2;
     }
 
-    .sidebar-contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
+    .sidebar-contact a { color: var(--accent); text-decoration: none; }
     .sidebar-contact a:hover { text-decoration: underline; }
 
-
-    /* ═══════════ MAIN CONTENT ═══════════ */
+    /* ── MAIN ── */
     main {
       flex: 1;
       padding: 64px 56px 80px;
       max-width: var(--max-w);
     }
 
-    /* ── SECTION spacing ── */
-
-#about {
-  margin-bottom: 60px !important;
-}
-
-#news {
-  margin-bottom: 60px !important;
-}
-
-#working-papers {
-  margin-bottom: 60px !important;
-}
-
-#research {
-  margin-top: 60px !important;
-  margin-bottom: 60px !important;
-}
-
-#teaching {
-  margin-top: 60px; 
-}
-
-
-
-
-
-
-.paper-card:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-
+    section { margin-bottom: 56px; }
     section:last-child { margin-bottom: 0; }
 
-    /* ── SECTION HEADINGS ── */
     .section-label {
       font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      font-size: 11px; font-weight: 400;
+      letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 24px;
-      padding-bottom: 10px;
+      margin-bottom: 24px; padding-bottom: 10px;
       border-bottom: 1px solid var(--line);
     }
 
-    /* ═══════════ ABOUT / HERO ═══════════ */
+    /* ── ABOUT ── */
     .hero-name {
       font-family: var(--font-head);
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 600;
-      line-height: 1.2;
-      margin-bottom: 6px;
+      font-size: clamp(28px, 4vw, 40px); font-weight: 600;
+      line-height: 1.2; margin-bottom: 6px;
     }
 
     .hero-tagline {
       font-family: var(--font-head);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--ink-soft);
-      margin-bottom: 28px;
+      font-style: italic; font-size: 18px;
+      color: var(--ink-soft); margin-bottom: 28px;
     }
 
     .hero-bio p {
-      font-size: 15.5px;
-      line-height: 1.8;
-      margin-bottom: 14px;
-      max-width: 640px;
+      font-size: 15.5px; line-height: 1.8;
+      margin-bottom: 14px; max-width: 640px;
     }
 
     .hero-bio p:last-child { margin-bottom: 0; }
 
-    /* Research interests chips */
-    .interest-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 20px;
-    }
+    .interest-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 
     .chip {
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.04em;
+      font-size: 12px; font-weight: 400; letter-spacing: 0.04em;
       padding: 5px 12px;
-      border: 1px solid var(--accent);
-      border-radius: 20px;
+      border: 1px solid var(--accent); border-radius: 20px;
       color: var(--accent);
     }
 
-    /* ═══════════ NEWS / UPDATES ═══════════
-       To add a news item: copy one <article> block.
-       Newest first.
-       ═══════════════════════════════════════ */
-    .news-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+    /* ── NEWS ── */
+    .news-list { display: flex; flex-direction: column; gap: 18px; }
 
     .news-item {
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 0 20px;
-      font-size: 14.5px;
-      line-height: 1.7;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--line);
+      display: grid; grid-template-columns: 90px 1fr;
+      gap: 0 20px; font-size: 14.5px; line-height: 1.7;
+      padding-bottom: 18px; border-bottom: 1px solid var(--line);
     }
 
     .news-item:last-child { border-bottom: none; padding-bottom: 0; }
 
-    .news-date {
-      color: var(--ink-soft);
-      font-size: 12px;
-      padding-top: 3px;
-      letter-spacing: 0.02em;
-    }
-
+    .news-date { color: var(--ink-soft); font-size: 12px; padding-top: 3px; }
     .news-text a { color: var(--accent); text-decoration: none; }
     .news-text a:hover { text-decoration: underline; }
 
-    /* ═══════════ PAPERS ═══════════
-       Each paper is a .paper-card.
-       Structure:
-         • Title (link to PDF)
-         • Authors
-         • One-sentence tagline  ← the thing people actually read
-         • [Abstract ▾] toggle   ← full abstract hidden by default
-         • [Paper] [Slides] [Appendix] buttons
-       ═══════════════════════════════ */
-    .paper-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    /* ── PAPERS ── */
+    .paper-list { display: flex; flex-direction: column; gap: 0; }
 
     .paper-card {
       padding: 28px 0;
@@ -314,254 +195,173 @@
     }
 
     .paper-card:first-child { padding-top: 0; }
-    .paper-card:last-child  { border-bottom: none; padding-bottom: 0}
+    .paper-card:last-child  { border-bottom: none; padding-bottom: 0; }
 
     .paper-status {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 6px;
     }
 
     .paper-title {
       font-family: var(--font-head);
-      font-size: 17px;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 4px;
+      font-size: 17px; font-weight: 600; line-height: 1.4; margin-bottom: 4px;
     }
 
-    .paper-title a {
-      color: var(--ink);
-      text-decoration: none;
-    }
-
+    .paper-title a { color: var(--ink); text-decoration: none; }
     .paper-title a:hover { color: var(--accent); }
 
-    .paper-authors {
-      font-size: 13px;
-      color: var(--ink-soft);
-      margin-bottom: 10px;
-    }
+    .paper-authors { font-size: 13px; color: var(--ink-soft); margin-bottom: 10px; }
 
     .paper-journal {
-      font-size: 13px;
-      font-style: italic;
-      color: var(--ink-soft);
-      margin-bottom: 10px;
+      font-size: 13px; font-style: italic;
+      color: var(--ink-soft); margin-bottom: 10px;
     }
 
-    /* One-sentence summary — always visible */
-    .paper-summary {
-      font-size: 14.5px;
-      line-height: 1.7;
-      margin-bottom: 14px;
-      max-width: 620px;
-    }
+    .paper-summary { font-size: 14.5px; line-height: 1.7; margin-bottom: 14px; max-width: 620px; }
 
-    /* Abstract toggle */
     .abstract-toggle {
-      background: none;
-      border: none;
-      cursor: pointer;
+      background: none; border: none; cursor: pointer;
       font-family: var(--font-body);
-      font-size: 12px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      padding: 0;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+      font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--ink-soft); padding: 0; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 5px;
       transition: color 0.15s;
     }
 
     .abstract-toggle:hover { color: var(--accent); }
-
-    .abstract-toggle .chevron {
-      display: inline-block;
-      transition: transform 0.2s;
-      font-size: 10px;
-    }
-
+    .abstract-toggle .chevron { display: inline-block; transition: transform 0.2s; font-size: 10px; }
     .abstract-toggle.open .chevron { transform: rotate(180deg); }
 
     .paper-abstract {
-      display: none;
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--ink-soft);
-      max-width: 620px;
-      padding: 14px 16px;
-      border-left: 2px solid var(--line);
-      margin-bottom: 14px;
+      display: none; font-size: 14px; line-height: 1.8;
+      color: var(--ink-soft); max-width: 620px;
+      padding: 14px 16px; border-left: 2px solid var(--line); margin-bottom: 14px;
     }
 
     .paper-abstract.visible { display: block; }
 
-    /* Links row */
-    .paper-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .paper-links { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .paper-btn {
-      font-size: 11.5px;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent);
-      text-decoration: none;
+      font-size: 11.5px; font-weight: 400;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
       padding: 5px 13px;
-      border: 1px solid var(--accent);
-      border-radius: 3px;
+      border: 1px solid var(--accent); border-radius: 3px;
       transition: background 0.15s, color 0.15s;
     }
 
-    .paper-btn:hover {
-      background: var(--accent);
-      color: var(--bg);
-    }
+    .paper-btn:hover { background: var(--accent); color: var(--bg); }
 
-    /* ═══════════ TEACHING ═══════════ */
-    .course-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    /* ── TEACHING ── */
+    .course-list { display: flex; flex-direction: column; gap: 20px; }
 
     .course-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 4px 20px;
-      padding-bottom: 20px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 4px 20px; padding-bottom: 20px;
       border-bottom: 1px solid var(--line);
     }
 
     .course-item:last-child { border-bottom: none; padding-bottom: 0; }
 
-    .course-name {
-      font-family: var(--font-head);
-      font-size: 15px;
-      font-weight: 600;
-    }
+    .course-name { font-family: var(--font-head); font-size: 15px; font-weight: 600; }
 
     .course-level {
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: none;
-      color: var(--accent);
-      margin-top: 3px;
+      font-size: 12px; letter-spacing: 0.08em;
+      text-transform: none; color: var(--accent); margin-top: 3px;
     }
 
-    .course-desc {
-      font-size: 14px;
-      color: var(--ink-soft);
-      grid-column: 1;
-    }
+    .course-desc { font-size: 14px; color: var(--ink-soft); grid-column: 1; }
 
-    /* ═══════════ FOOTER ═══════════ */
+    /* ── FOOTER ── */
     footer {
-      margin-top: 40px;
-      padding-top: 28px;
+      margin-top: 40px; padding-top: 28px;
       border-top: 1px solid var(--line);
-      font-size: 12px;
-      color: var(--ink-soft);
+      font-size: 12px; color: var(--ink-soft);
     }
 
-    /* ═══════════ RESPONSIVE ═══════════ */
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .shell { flex-direction: column; }
 
-    
+      .sidebar {
+        position: static; height: auto; width: 100%;
+        padding: 32px 20px 24px;
+        border-right: none; border-bottom: 1px solid var(--line);
+        flex-direction: column; align-items: center;
+      }
 
+      .sidebar-name, .sidebar-title { width: 100%; text-align: center; }
 
+      nav {
+        flex-direction: row; flex-wrap: wrap;
+        justify-content: center; gap: 4px; margin-bottom: 16px;
+      }
+
+      nav a { padding: 6px 12px; font-size: 12px; }
+
+      main { padding: 32px 20px 48px; }
+
+      .hero-name { font-size: 28px; }
+      .hero-tagline { font-size: 16px; }
+      .news-item { grid-template-columns: 1fr; }
+      .paper-title { font-size: 15px; }
+      .course-item { grid-template-columns: 1fr; }
+      .interest-list { justify-content: center; }
+    }
   </style>
 
 </head>
-
 <body>
 
 <div class="shell">
 
-  <!-- ╔══════════════════╗
-       ║   LEFT SIDEBAR   ║
-       ╚══════════════════╝
-       Edit name, title, photo path, nav links, and contact here.
-  -->
+  <!-- ══ SIDEBAR ══ -->
   <aside class="sidebar">
 
-    <!-- ── PHOTO ──
-         Replace the src with your actual photo filename.
-         The photo should be in the same folder as index.html.
-         If no photo yet, delete the <img> and uncomment the placeholder div. 
-         <div class="sidebar-photo-placeholder" id="photo-placeholder" style="display: flex;">Photo</div>
-         -->
-     <img class="sidebar-photo" 
-     src="HUSE_pic_small.jpg" 
-     alt="Photo of Cristian Huse" 
-     onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';" />
+    <img class="sidebar-photo"
+         src="HUSE_pic_small.jpg"
+         alt="Photo of Cristian Huse"
+         onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';" />
+    <div class="sidebar-photo-placeholder" id="photo-placeholder">Photo</div>
 
-
-
-    <!-- ── NAME & POSITION ── -->
     <div class="sidebar-name">Cristian Huse</div>
-    <div class="sidebar-title">
-      Economist
-<!--  
-      Chair of Applied Microeconomics<br>
-      University of Oldenburg
-         -->      
-    </div>
+    <div class="sidebar-title">Economist</div>
 
-    <!-- ── NAVIGATION ──
-         Each <a href="#id"> scrolls to a section below.
-         Add or remove items as needed. -->
     <nav>
-      <a href="#about" class="active">About</a>
-      <a href="#news" class="">News</a>
-      <a href="#working-papers" class="">Research</a>
-      <a href="#research" class="">Publications</a>
-      <a href="#teaching" class="">Teaching</a>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#working-papers">Research</a>
+      <a href="#research">Publications</a>
+      <a href="#retired-papers">Retired WPs</a>
+      <a href="#teaching">Teaching</a>
       <a href="HuseCV_web.pdf" target="_blank">CV ↗</a>
-      <a href="huse_publications.bib" download>BibTeX File ↓</a>
+      <a href="huse_publications.bib" download>BibTeX ↓</a>
     </nav>
 
-    <!-- ── CONTACT ── -->
     <div class="sidebar-contact">
       <div><strong>Email</strong></div>
       <div><a href="mailto:cristian.huse@uol.de">cristian.huse@uol.de</a></div>
       <div style="margin-top:8px"><strong>Phone</strong></div>
       <div>+49 441 798 4670</div>
       <div style="margin-top:8px"><strong>Links</strong></div>
-      <div><a href="https://orcid.org/0000-0002-2532-3522" target="_blank">ORCID</a></div>      
+      <div><a href="https://orcid.org/0000-0002-2532-3522" target="_blank">ORCID</a></div>
       <div><a href="https://scholar.google.com/citations?hl=en&user=3qc9IlUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a></div>
-      <!-- 
-      <div><a href="https://cepr.org/about/people/cristian-huse-0" target="_blank">CEPR</a></div>
-      <div><a href="https://ideas.repec.org/" target="_blank">IDEAS/RePEC</a></div>
-       -->
     </div>
 
   </aside>
 
 
-  <!-- ╔══════════════════╗
-       ║   MAIN CONTENT   ║
-       ╚══════════════════╝ -->
+  <!-- ══ MAIN CONTENT ══ -->
   <main>
 
-    <!-- ══════════════════════════════
-         SECTION 1 — ABOUT
-         ══════════════════════════════ -->
+    <!-- ═══════════════════════════
+         1. ABOUT
+         ═══════════════════════════ -->
     <section id="about">
-
       <h1 class="hero-name">Cristian Huse</h1>
       <p class="hero-tagline">Environmental &amp; Energy Economics · Industrial Organization</p>
 
-      <!-- ── BIO ──
-           Edit the paragraphs below. Keep it to 3–4 short punchy paragraphs.
-           Think of this as your "first impression" on a hiring committee. -->
       <div class="hero-bio">
         <p>
           I am Professor of Economics at the University of Oldenburg, where I hold the
@@ -569,129 +369,103 @@
           Organization and Environmental &amp; Energy Economics.
         </p>
         <p>
-          I am particularly interested in how economic agents respond to regulation, taxation, 
+          I am particularly interested in how economic agents respond to regulation, taxation,
           and ownership structure in markets in which decisions have a strong environmental-
-          and energy-related dimension. These are questions with direct implications for 
+          and energy-related dimension. These are questions with direct implications for
           market regulation and policy design.
         </p>
         <p>
-          I am co-organizer of the 
-          <a href="https://sites.google.com/usp.br/lcmworkshop/home" target="_blank" style="color:var(--accent); text-decoration:none;">Economics of Low-Carbon
+          I am co-organizer of the
+          <a href="https://sites.google.com/usp.br/lcmworkshop/home" target="_blank"
+             style="color:var(--accent); text-decoration:none;">Economics of Low-Carbon
           Markets (LCM) Workshop</a>, running since 2013.
         </p>
       </div>
 
-      <!-- ── RESEARCH INTERESTS CHIPS ──
-           Add or remove chips freely. -->
       <div class="interest-list">
-        <span class="chip">Applied Microeconomics</span>        
+        <span class="chip">Applied Microeconomics</span>
         <span class="chip">Energy Economics</span>
         <span class="chip">Environmental Economics</span>
         <span class="chip">Industrial Organization</span>
         <span class="chip">Antitrust</span>
         <span class="chip">Regulation</span>
       </div>
-
     </section>
 
 
-    <!-- ══════════════════════════════
-         SECTION 2 — NEWS
-         ══════════════════════════════
-         Keep this to the last ~4 items. Delete old ones ruthlessly.
-         A stale "News" section is worse than no news section.
-         ═════════════════════════════= -->
+    <!-- ═══════════════════════════
+         2. NEWS
+         ═══════════════════════════ -->
     <section id="news">
       <div class="section-label">News &amp; Updates</div>
-
       <div class="news-list">
-
-        <!-- ── NEWS ITEM TEMPLATE ──
-             Copy this block to add a new item.
-             Date format: Month YYYY -->
 
         <div class="news-item">
           <div class="news-date">2026</div>
-          <div class="news-text">
-            I presented my work at the TSE Winter IO Workshop.
-            <!-- Optional link: <a href="papers/paper.pdf">Download</a> -->
-          </div>
+          <div class="news-text">I presented my work at the TSE Winter IO Workshop.</div>
         </div>
 
         <div class="news-item">
           <div class="news-date">2026</div>
-          <div class="news-text">
-            I am visiting the Toulouse School of Economics for the period February-June 2026.
-            <!-- Optional link: <a href="papers/paper.pdf">Download</a> -->
-          </div>
+          <div class="news-text">I am visiting the Toulouse School of Economics for the period February–June 2026.</div>
         </div>
 
         <div class="news-item">
           <div class="news-date">2025</div>
           <div class="news-text">
-            I presented my work at the University of Freiburg (April), the Transport 
-            Economics Workshop (Barcelona, August), the Getulio Vargas Foundation (EPGE, December), 
+            I presented my work at the University of Freiburg (April), the Transport
+            Economics Workshop (Barcelona, August), the Getulio Vargas Foundation (EPGE, December),
             and the Brazilian Econometric Society Meetings (December).
           </div>
         </div>
 
-
         <div class="news-item">
           <div class="news-date">2024</div>
           <div class="news-text">
-            I have been nominated for the "Award of Excellence in Teaching" for my 
-            MSc course "Econometrics of Policy Evaluation (academic year 2023-2024).
+            Nominated for the "Award of Excellence in Teaching" for my MSc course
+            "Econometrics of Policy Evaluation" (academic year 2023–2024).
           </div>
         </div>
 
-
+        <!-- ── ADD NEWS ITEMS ABOVE THIS LINE (newest first) ── -->
       </div>
     </section>
 
 
-
-    <!-- ══════════════════════════════
-         SECTION 3 — CURRENT RESEARCH
-         ══════════════════════════════
-         Same format as published research.
-         Use status: "Working Paper" / "Under Review" / "Revise & Resubmit"
-         ═════════════════════════════= -->
+    <!-- ═══════════════════════════
+         3. CURRENT RESEARCH
+         ═══════════════════════════
+         Status options: Working Paper · Under Review · Revise & Resubmit · Work in Progress
+    -->
     <section id="working-papers">
       <div class="section-label">Current Research</div>
-
-
-
       <div class="paper-list">
 
         <div class="paper-card">
           <div class="paper-status">Under Revision · 2026</div>
           <div class="paper-title">
             <a href="#" target="_blank">
-              Fast and Furious (and Dirty): How Asymmetric Regulation May Hinder 
-              Environmental Policy.
+              Fast and Furious (and Dirty): How Asymmetric Regulation May Hinder Environmental Policy.
             </a>
           </div>
           <div class="paper-authors">Cristian Huse</div>
         </div>
-        
+
         <div class="paper-card">
           <div class="paper-status">Under Revision · 2026</div>
           <div class="paper-title">
             <a href="#" target="_blank">
-              Kill Two Birds with One Stone? Environmental Policy Design with 
-              Multiple Targets in the Swedish Car Market.
+              Kill Two Birds with One Stone? Environmental Policy Design with Multiple Targets in the Swedish Car Market.
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Claudio Lucinda</div>
         </div>
 
-
         <div class="paper-card">
           <div class="paper-status">Work in Progress · 2026</div>
           <div class="paper-title">
             <a href="#" target="_blank">
-              Overlapping Ownership in the Automobile Industry: Quantifying the 
-              Importance of Common- and Cross-Ownership.
+              Overlapping Ownership in the Automobile Industry: Quantifying the Importance of Common- and Cross-Ownership.
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Ricardo Ribeiro · Frank Verboven</div>
@@ -707,956 +481,391 @@
           <div class="paper-authors">Cristian Huse · Claudio Lucinda · Matheus A. V. de Paulo</div>
         </div>
 
-
-
-    <!-- 
-          <p class="paper-summary">
-            Distinguishing common from cross-ownership matters for competition:
-            we show they have opposite effects on pricing in automobile markets,
-            with cross-ownership softening competition more than standard measures suggest.
-          </p>
-
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We develop a framework to separately identify common ownership and
-            cross-ownership in differentiated product markets. Using data from the
-            European automobile industry, we find that cross-ownership — direct
-            financial stakes between competitors — is associated with systematically
-            higher prices, beyond what can be explained by common ownership through
-            institutional investors. Our results have implications for merger review
-            and competition enforcement.
-        -->
-            <!-- REPLACE with your actual abstract -->
-    <!-- 
-          </div>
-
-          <div class="paper-links">
-            <a class="paper-btn" href="#" target="_blank">Paper</a>
-            <a class="paper-btn" href="#" target="_blank">Slides</a>
-          </div>
-        -->
-        </div>
-
-
-
-
         <!-- ── ADD MORE WORKING PAPERS ABOVE THIS LINE ── -->
+      </div>
+    </section>
 
 
-    <!-- ══════════════════════════════
-         SECTION 4 — PUBLISHED RESEARCH
-         ══════════════════════════════
-         FORMAT PER PAPER:
-           • status tag (Published / Forthcoming / R&R)
-           • Title linked to PDF or journal page
-           • Authors
-           • Journal, year, volume
-           • One-sentence summary  ← REQUIRED. Best ROI for the reader.
-           • [Abstract ▾] toggle   ← optional, collapses full abstract
-           • Buttons: [Paper] [Slides] [Appendix] [Replication]
-         ═════════════════════════════= -->
+    <!-- ═══════════════════════════
+         4. PUBLISHED ARTICLES
+         ═══════════════════════════
+         Paper card structure (copy to add):
+           <div class="paper-card">
+             <div class="paper-status">Published Article</div>
+             <div class="paper-title"><a href="LINK">TITLE</a></div>
+             <div class="paper-authors">AUTHORS</div>
+             <div class="paper-journal"><em>JOURNAL</em>, YEAR</div>
+             <div class="paper-links">
+               <a class="paper-btn" href="LINK">Journal</a>
+               <a class="paper-btn" href="LINK">Paper</a>
+             </div>
+           </div>
+    -->
     <section id="research">
       <div class="section-label">Published &amp; Forthcoming Research</div>
-
       <div class="paper-list">
 
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1111/joie.12390" target="_blank">
               Common-Ownership vs. Cross-Ownership: Evidence from the Automobile Industry
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Ricardo Ribeiro · Frank Verboven</div>
-          <div class="paper-journal"><em>Journal of Industrial Economics</em>, 2024</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of Industrial Economics</em>, 2024, 72(4), 1339–1359</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.1111/joie.12390" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://doi.org/10.1111/joie.12390" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/Huse_Ribeiro_Verboven.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://journals.uio.no/index.php/NJHE" target="_blank">
               An Interim Economic Evaluation of Sweden's Initial COVID-19 Strategy
             </a>
           </div>
           <div class="paper-authors">Henrik Andersson · Cristian Huse</div>
-          <div class="paper-journal"><em> Nordic Journal of Health Economics</em>, 2024</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Nordic Journal of Health Economics</em>, 2024, 12(1)</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://journals.uio.no/index.php/NJHE" target="_blank">Journal</a>            
-            <a class="paper-btn" href="https://cristianhuse.github.io/files/Andersson%20%26%20Huse%20(2024%2C%20NJHE).pdf" target="_blank">Paper</a>            
+            <a class="paper-btn" href="https://journals.uio.no/index.php/NJHE" target="_blank">Journal</a>
+            <a class="paper-btn" href="https://cristianhuse.github.io/files/Andersson%20%26%20Huse%20(2024%2C%20NJHE).pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1086/716878" target="_blank">
               Salience and Policy Instruments: Evidence from the Auto Market
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Nikita Koptyug</div>
-          <div class="paper-journal"><em> Journal of the Association of Environmental and Resource Economists (JAERE)</em>, 2022</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of the Association of Environmental and Resource Economists</em>, 2022, 9(2), 345–382</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.1086/716878" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://doi.org/10.1086/716878" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/HK%20%282022,%20JAERE%29.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1016/j.jeem.2021.102529" target="_blank">
               Assessing the Effects of a Large Temporary Energy Savings Program: Evidence from a Developing Country
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Claudio Lucinda · Andre Ribeiro</div>
-          <div class="paper-journal"><em> Journal of Environmental Economics and Management (JEEM)</em>, 2021</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of Environmental Economics and Management</em>, 2021, 110, 102529</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.1016/j.jeem.2021.102529" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://doi.org/10.1016/j.jeem.2021.102529" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/HLR%20%282021,%20JEEM%29.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1016/j.enpol.2019.111207" target="_blank">
               Consumer Response to Energy Label Policies: Evidence from the Brazilian Energy Label Program
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Claudio Lucinda · Andre Ribeiro</div>
-          <div class="paper-journal"><em> Energy Policy</em>, 2020</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Energy Policy</em>, 2020, 138, 111207</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.1016/j.enpol.2019.111207" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://doi.org/10.1016/j.enpol.2019.111207" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/Huse%20et%20al%20%282020,%20EnPol%29.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1038/s41560-018-0175-3" target="_blank">
               Fuel Choice and Fuel Demand Elasticities in Markets with Flex-fuel Vehicles
             </a>
           </div>
           <div class="paper-authors">Cristian Huse</div>
-          <div class="paper-journal"><em> Nature Energy</em>, 2018</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Nature Energy</em>, 2018, 3, 582–588</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://rdcu.be/VLDm" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://rdcu.be/VLDm" target="_blank">Journal</a>
             <a class="paper-btn" href="https://cristianhuse.github.io/files/Huse%20(2018%2C%20NEnergy).pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1111/jems.12184" target="_blank">
               Bailing Out on the Car That Wasn't Bailed Out: Explaining Consumer Reactions to Financial Distress
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Nikita Koptyug</div>
-          <div class="paper-journal"><em> Journal of Economics and Management Strategy (JEMS)</em>, 2017</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of Economics and Management Strategy</em>, 2017, 26(2), 337–374</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.1111/jems.12184" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://doi.org/10.1111/jems.12184" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/HK_Saab_full.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.1111/ecoj.12060" target="_blank">
               The Market Impact and the Cost of Environmental Policy: Evidence from the Swedish "Green Car" Rebate
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Claudio Lucinda</div>
-          <div class="paper-journal"><em> Economic Journal</em>, 2014</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Economic Journal</em>, 2014, 124, F393–F419 &nbsp;(lead article)</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.1111/ecoj.12060" target="_blank">Journal</a>            
+            <a class="paper-btn" href="https://doi.org/10.1111/ecoj.12060" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/Huse%20&%20Lucinda%20%282014,%20Econ%20Journal%29.pdf" target="_blank">Paper</a>
-            <a class="paper-btn" href="http://bit.ly/11WLPQv" target="_blank">LSE Blog </a>            
+            <a class="paper-btn" href="http://bit.ly/11WLPQv" target="_blank">LSE Blog</a>
+          </div>
         </div>
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="http://www.sciencedirect.com/science/article/pii/S0095069613000223" target="_blank">
               Build It, But Will They Come? Evidence from Consumer Choice Between Gasoline and Sugarcane Ethanol
             </a>
           </div>
           <div class="paper-authors">Alberto Salvo · Cristian Huse</div>
-          <div class="paper-journal"><em> Journal of Environmental Economics and Management (JEEM)</em>, 2013</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of Environmental Economics and Management</em>, 2013, 66, 251–279</div>
           <div class="paper-links">
-            <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S0095069613000223" target="_blank">Journal</a>                                  
+            <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S0095069613000223" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/Salvo%20&%20Huse%20%282013,%20JEEM%29.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
-               Does Product Differentiation Soften Price Reactions to Entry? 
-               Evidence from the Airline Industry
+            <a href="http://www.ingentaconnect.com/content/lse/jtep/2012/00000046/00000002/art00003" target="_blank">
+              Does Product Differentiation Soften Price Reactions to Entry? Evidence from the Airline Industry
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Alessandro V. M. Oliveira</div>
-          <div class="paper-journal"><em> Journal of Transport Economics and Policy</em>, 2012</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of Transport Economics and Policy</em>, 2012, 46(2), 189–204</div>
           <div class="paper-links">
-            <a class="paper-btn" href="http://www.ingentaconnect.com/content/lse/jtep/2012/00000046/00000002/art00003" target="_blank">Journal</a>                      
+            <a class="paper-btn" href="http://www.ingentaconnect.com/content/lse/jtep/2012/00000046/00000002/art00003" target="_blank">Journal</a>
             <a class="paper-btn" href="https://cristianhuse.github.io/files/HO%20(2012%2C%20JTEP).pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="http://www.iaee.org/en/publications/ejarticle.aspx?id=2429" target="_blank">
               Is Arbitrage Tying the Price of Ethanol to that of Gasoline? Evidence of the Uptake of Flexible-Fuel Technology
             </a>
           </div>
           <div class="paper-authors">Alberto Salvo · Cristian Huse</div>
-          <div class="paper-journal"><em> Energy Journal</em>, 2011</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Energy Journal</em>, 2011, 32(3), 119–148</div>
           <div class="paper-links">
-            <a class="paper-btn" href="http://www.iaee.org/en/publications/ejarticle.aspx?id=2429" target="_blank">Journal</a>                      
+            <a class="paper-btn" href="http://www.iaee.org/en/publications/ejarticle.aspx?id=2429" target="_blank">Journal</a>
             <a class="paper-btn" href="http://cristianhuse.github.io/files/HS_ethanol_arbitrage.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
-               Term Structure Modelling with Observable State Variables
+            <a href="http://www.sciencedirect.com/science/article/pii/S0378426611001658" target="_blank">
+              Term Structure Modelling with Observable State Variables
             </a>
           </div>
           <div class="paper-authors">Cristian Huse</div>
-          <div class="paper-journal"><em> Journal of Banking and Finance</em>, 2011</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Journal of Banking and Finance</em>, 2011, 35(12), 3240–3252</div>
           <div class="paper-links">
-            <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S0378426611001658" target="_blank">Journal</a>          
+            <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S0378426611001658" target="_blank">Journal</a>
             <a class="paper-btn" href="https://cristianhuse.github.io/files/Huse%20(2011%2C%20JBF).pdf" target="_blank">Paper</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
-               Localized Competitive Advantage and Price Reactions to Entry: 
-               Full-service vs. Low-cost Airlines in Recently Liberalized Emerging Markets
+            <a href="http://www.sciencedirect.com/science/article/pii/S1366554508001221" target="_blank">
+              Localized Competitive Advantage and Price Reactions to Entry: Full-service vs. Low-cost Airlines in Recently Liberalized Emerging Markets
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Alessandro V. M. Oliveira</div>
-          <div class="paper-journal"><em> Transportation Research E: Logistics and Transportation Review</em>, 2009</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Transportation Research E: Logistics and Transportation Review</em>, 2009, 45(2), 307–320</div>
           <div class="paper-links">
-            <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S1366554508001221" target="_blank">Journal</a>          
+            <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S1366554508001221" target="_blank">Journal</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
-                Investigating Business Traveller Heterogeneity: Low-Cost vs 
-                Full-Service Airline Users?
+            <a href="http://www.sciencedirect.com/science/article/pii/S1366554506000810" target="_blank">
+              Investigating Business Traveller Heterogeneity: Low-Cost vs Full-Service Airline Users?
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Fabio Evangelho</div>
-          <div class="paper-journal"><em> Transportation Research E: Logistics and Transportation Review</em>, 2007</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-  
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Transportation Research E: Logistics and Transportation Review</em>, 2007, 43(3), 259–268</div>
           <div class="paper-links">
             <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S1366554506000810" target="_blank">Journal</a>
+          </div>
         </div>
-
-
-
-
-
-
-
-
-        <!-- ── SEPARATOR ── -->
 
         <div class="paper-card">
           <div class="paper-status">Published Article</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
-                Market Entry of a Low-Cost Airline and Impacts on the Brazilian 
-                Business Travellers
+            <a href="http://www.sciencedirect.com/science/article/pii/S0969699704000602" target="_blank">
+              Market Entry of a Low-Cost Airline and Impacts on the Brazilian Business Travellers
             </a>
           </div>
           <div class="paper-authors">Fabio Evangelho · Cristian Huse · Alexandre Linhares</div>
-          <div class="paper-journal"><em> Journal of Air Transport Management</em>, 2005</div>
-
-          <!-- ONE-SENTENCE SUMMARY — required. No jargon. Think: dinner-party explanation. -->
-          <!-- 
-          <p class="paper-summary">
-            Fuel economy standards for automobiles reduce emissions substantially,
-            but their cost-effectiveness depends critically on whether consumers
-            already value fuel savings when buying cars.
-          </p>
- -->
-          <!-- ABSTRACT TOGGLE — delete this block if you prefer no abstracts -->
-          <!-- 
-          <button class="abstract-toggle" onclick="toggleAbstract(this)">
-            Abstract <span class="chevron">▾</span>
-          </button>
-          <div class="paper-abstract">
-            We estimate a structural model of the Brazilian automobile market to evaluate
-            the welfare effects of fuel economy standards. We find that standards are an
-            effective second-best instrument in markets where consumers undervalue fuel
-            savings, but their benefits diminish significantly once consumer valuation
-            is corrected. Our results speak to the design of complementary carbon pricing
-            and fuel-standard policies.
-          </div>
-  -->
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
-            
-            <div class="paper-links">
+          <div class="paper-journal"><em>Journal of Air Transport Management</em>, 2005, 11(2), 99–105</div>
+          <div class="paper-links">
             <a class="paper-btn" href="http://www.sciencedirect.com/science/article/pii/S0969699704000602" target="_blank">Journal</a>
           </div>
         </div>
 
-
-
-
-
-
-        <!-- ── ADD MORE PUBLISHED CHAPTERS ABOVE THIS LINE ── -->
-      </div>  
+        <!-- ── ADD MORE PUBLISHED ARTICLES ABOVE THIS LINE ── -->
+      </div>
     </section>
 
 
-
-
-
-
-
-
-
-
-        <!--    <section id="research">  -->
-
+    <!-- ═══════════════════════════
+         5. BOOK CHAPTERS
+         ═══════════════════════════ -->
+    <section id="book-chapters">
       <div class="section-label">Book Chapters</div>
-
       <div class="paper-list">
 
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
         <div class="paper-card">
           <div class="paper-status">Published Book Chapter</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://doi.org/10.4337/9781800375550.00010" target="_blank">
               Pricing and Other Instruments for Climate Change Mitigation in Private Transport
             </a>
           </div>
           <div class="paper-authors">Henrik Andersson · Davide Cerruti · Cristian Huse</div>
-          <div class="paper-journal"><em>Handbook on Transport Pricing and Financing</em>, 2023</div>
-
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Handbook on Transport Pricing and Financing</em>, Edward Elgar, 2023</div>
           <div class="paper-links">
-            <a class="paper-btn" href="https://doi.org/10.4337/9781800375550.00010" target="_blank">Handbook</a>            
+            <a class="paper-btn" href="https://doi.org/10.4337/9781800375550.00010" target="_blank">Handbook</a>
             <a class="paper-btn" href="https://cristianhuse.github.io/files/ACHuse_2023.pdf" target="_blank">Paper</a>
+          </div>
         </div>
 
-
-
-
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
         <div class="paper-card">
           <div class="paper-status">Published Book Chapter</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="http://dx.doi.org/10.1016/b978-0-08-102671-7.10094-6" target="_blank">
               Policy Instruments to Reduce Carbon Emissions from Road Transport
             </a>
           </div>
           <div class="paper-authors">Davide Cerruti · Cristian Huse</div>
-          <div class="paper-journal"><em>International Encyclopedia of Transportation</em>, 2021</div>
-
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>International Encyclopedia of Transportation</em>, Elsevier, 2021</div>
           <div class="paper-links">
-            <a class="paper-btn" href="http://dx.doi.org/10.1016/b978-0-08-102671-7.10094-6" target="_blank">Encyclopedia</a>            
+            <a class="paper-btn" href="http://dx.doi.org/10.1016/b978-0-08-102671-7.10094-6" target="_blank">Encyclopedia</a>
             <a class="paper-btn" href="https://cristianhuse.github.io/files/Cerruti%20%26%20Huse%20(2021%2C%20Encyclopedia).pdf" target="_blank">Paper</a>
+          </div>
         </div>
 
-
-
-
-
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
         <div class="paper-card">
           <div class="paper-status">Published Book Chapter</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://cristianhuse.github.io/files/Huse_Lucinda_Growth.pdf" target="_blank">
               Growth of the Middle Class: Meeting the Challenges
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Claudio Lucinda</div>
-          <div class="paper-journal"><em>Global Agribusiness Forum Academy</em>, 2014</div>
-
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Global Agribusiness Forum Academy</em>, DATAGRO, 2014</div>
           <div class="paper-links">
             <a class="paper-btn" href="https://cristianhuse.github.io/files/Huse_Lucinda_Growth.pdf" target="_blank">Paper</a>
+          </div>
         </div>
 
-
-
-
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
         <div class="paper-card">
           <div class="paper-status">Published Book Chapter</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
-              Estimation and Identification of Demand and Supply" (in Portuguese).
+            <a href="https://cristianhuse.github.io/files/HS.pdf" target="_blank">
+              Estimation and Identification of Demand and Supply (in Portuguese)
             </a>
           </div>
           <div class="paper-authors">Cristian Huse · Alberto Salvo</div>
-          <div class="paper-journal"><em>Quantitative Methods Applied to Antitrust and Regulation</em>, 2006</div>
-
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
+          <div class="paper-journal"><em>Quantitative Methods Applied to Antitrust and Regulation</em>, SDE/IPEA, 2006</div>
           <div class="paper-links">
             <a class="paper-btn" href="https://cristianhuse.github.io/files/HS.pdf" target="_blank">Paper</a>
+          </div>
         </div>
 
-
-
-
-
-        <!-- ── ADD MORE PUBLISHED CHAPTERS ABOVE THIS LINE ── -->
-      </div>  
+        <!-- ── ADD MORE BOOK CHAPTERS ABOVE THIS LINE ── -->
+      </div>
     </section>
 
 
-
-
-
-
-
-        <!--    <section id="research">  -->
-
+    <!-- ═══════════════════════════
+         6. RETIRED WORKING PAPERS
+         ═══════════════════════════ -->
+    <section id="retired-papers">
       <div class="section-label">Retired Working Papers</div>
-
       <div class="paper-list">
 
-
-
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
         <div class="paper-card">
           <div class="paper-status">Retired Working Paper</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://cepr.org/publications/dp9266" target="_blank">
               How to Use Demand Systems to Evaluate Risky Projects, with an Application to Automobile Production
             </a>
           </div>
           <div class="paper-authors">Richard Friberg · Cristian Huse</div>
           <div class="paper-journal"><em>CEPR Discussion Paper No. 9266</em>, 2012</div>
-
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
           <div class="paper-links">
-            <a class="paper-btn" href="https://cepr.org/publications/dp9266" target="_blank">CEPR</a>            
+            <a class="paper-btn" href="https://cepr.org/publications/dp9266" target="_blank">CEPR</a>
             <a class="paper-btn" href="https://cristianhuse.github.io/files/FH_demand_risk.pdf" target="_blank">Paper</a>
+          </div>
         </div>
 
-
-        <!-- ── PAPER TEMPLATE — copy to add more ── -->
-        <div class="paper-card" style="border-bottom: none; padding-bottom: 0;">
+        <div class="paper-card">
           <div class="paper-status">Retired Working Paper</div>
           <div class="paper-title">
-            <!-- Replace href with actual link -->
-            <a href="#" target="_blank">
+            <a href="https://cristianhuse.github.io/files/DH_coord_effects.pdf" target="_blank">
               Estimating the 'Coordinated Effects' of Mergers
             </a>
           </div>
           <div class="paper-authors">Peter Davis · Cristian Huse</div>
           <div class="paper-journal"><em>Working Paper</em>, 2009</div>
-
-          <!-- LINKS — add href to each button that exists; delete buttons that don't apply -->
           <div class="paper-links">
             <a class="paper-btn" href="https://cristianhuse.github.io/files/DH_coord_effects.pdf" target="_blank">Paper</a>
+          </div>
         </div>
-        </div>
-        <!-- ── ADD MORE PUBLISHED CHAPTERS ABOVE THIS LINE ── -->      
+
+        <!-- ── ADD MORE RETIRED PAPERS ABOVE THIS LINE ── -->
+      </div>
     </section>
 
 
-
-    <!-- ══════════════════════════════
-         SECTION 5 — TEACHING
-         ══════════════════════════════
-         Add/remove courses as needed.
-         ═════════════════════════════= -->
+    <!-- ═══════════════════════════
+         7. TEACHING
+         ═══════════════════════════
+         course-item structure (copy to add):
+           <div class="course-item">
+             <div class="course-name">COURSE NAME</div>
+             <div class="course-level">MSc · BSc</div>
+             <div class="course-desc">Description here.</div>
+           </div>
+    -->
+    <section id="teaching">
       <div class="section-label">Teaching</div>
-
       <div class="course-list">
 
         <div class="course-item">
           <div class="course-name">(Applied) Industrial Organization</div>
           <div class="course-level">MSc · BSc</div>
           <div class="course-desc">
-            Cost functions; Models of imperfect competition; Models of product 
-            differentiation; Demand estimation; Identification of supply and demand; 
-            Competition policy; Mergers; Advanced topics: Bundling, tying, switching 
+            Cost functions; Models of imperfect competition; Models of product
+            differentiation; Demand estimation; Identification of supply and demand;
+            Competition policy; Mergers; Advanced topics: Bundling, tying, switching
             costs, network goods, network externalities, and platforms.<br>
-            
             Empirical labs and projects using R.
           </div>
         </div>
@@ -1666,8 +875,7 @@
           <div class="course-level">MSc</div>
           <div class="course-desc">
             Causal inference; Reduced-form methods for programme evaluation; Applications in Economics.<br>
-            
-            Empirical labs using R.            
+            Empirical labs using R.
           </div>
         </div>
 
@@ -1675,10 +883,9 @@
           <div class="course-name">Advanced Econometrics: Statistical Learning</div>
           <div class="course-level">MSc</div>
           <div class="course-desc">
-            Classification; Resampling; Nonlinear models; Model selection; Regularization; 
+            Classification; Resampling; Nonlinear models; Model selection; Regularization;
             Tree-based models; Unsupervised learning; Applications within Economics.<br>
-            
-            Empirical labs and projects using R.            
+            Empirical labs and projects using R.
           </div>
         </div>
 
@@ -1686,20 +893,21 @@
           <div class="course-name">Environmental Economics and Environmental Policy</div>
           <div class="course-level">BSc</div>
           <div class="course-desc">
-            Externalities and Pigouvian taxation; Utility, social welfare, and markets; Policy targets; Policy instruments; Cost-benefit analysis.<br>
-            
+            Externalities and Pigouvian taxation; Utility, social welfare, and markets;
+            Policy targets; Policy instruments; Cost-benefit analysis.<br>
             Seminar with paper presentations.
           </div>
         </div>
 
+        <!-- ── ADD MORE COURSES ABOVE THIS LINE ── -->
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         FOOTER
-         ═════════════════════════════= -->
+
+    <!-- ═══════════════════════════
+         FOOTER — update date when you make changes
+         ═══════════════════════════ -->
     <footer>
-      <!-- Update the year when you update the page — takes 2 seconds. -->
       © Cristian Huse 2026 &nbsp;·&nbsp;
       Last updated: March 2026
     </footer>
@@ -1708,15 +916,10 @@
 </div>
 
 
-<!-- ══════════════════════════════
-     JAVASCRIPT — minimal
-     Only the abstract toggle.
-     ═════════════════════════════= -->
 <script>
   function toggleAbstract(btn) {
     btn.classList.toggle('open');
-    const abstract = btn.nextElementSibling;
-    abstract.classList.toggle('visible');
+    btn.nextElementSibling.classList.toggle('visible');
   }
 
   // Highlight active nav link on scroll
@@ -1737,15 +940,11 @@
 </script>
 
 
-
-
-
-<!-- Statcounter code for Webpage - March 2026
-https://cristianhuse.github.io/ on Github Sites (new) -->
+<!-- Statcounter -->
 <script type="text/javascript">
-var sc_project=13212022; 
-var sc_invisible=1; 
-var sc_security="ddb54545"; 
+var sc_project=13212022;
+var sc_invisible=1;
+var sc_security="ddb54545";
 </script>
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
@@ -1756,10 +955,7 @@ class="statcounter"
 src="https://c.statcounter.com/13212022/0/ddb54545/1/"
 alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-
-
+<!-- End of Statcounter -->
 
 
 </body></html>
